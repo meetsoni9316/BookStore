@@ -9,14 +9,8 @@ import cors from "cors";
 
 const app = express();
 
-const corsOptions = {
-    origin: 'https://book-store-frontend-eosin.vercel.app', // Replace with your frontend's domain
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
-};
 
-// Middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 dotenv.config();
 app.use(express.json());
