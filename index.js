@@ -10,7 +10,7 @@ import cors from "cors";
 const app = express();
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Replace with your frontend's domain
+    origin: 'http://localhost:5173/', // Replace with your frontend's domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: 'Content-Type,Authorization',
 };
