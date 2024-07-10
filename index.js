@@ -9,7 +9,15 @@ import cors from "cors";
 
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+    origin: 'http://localhost:5173', // Replace with your frontend's domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+};
+
+// Middleware
+app.use(cors(corsOptions));
+app.use(bodyParser.json());
 dotenv.config();
 app.use(express.json());
 
